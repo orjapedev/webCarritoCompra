@@ -1,0 +1,22 @@
+<div class="container">
+
+    <div class="row pt-5">   
+        <div class="col-md-4" *ngFor="let item of listProductos.data ">
+              <div class="card" style="width: 18rem;">
+                <img class="card-img-top" *ngIf="item.imagen != null" src="/assets/{{ item.imagen }}" [alt]="item.imagen">
+                <img class="card-img-top" *ngIf="item.imagen == null" src="/assets/imagen.jpg" alt="imagen" width="30">
+                <hr>
+                <div class="card-body">
+                  <h5 class="card-title">{{ item.descripcion }}</h5>
+                  <p class="card-text"> {{ item.precio | currency }} </p>
+                  <a href="#" class="btn btn-primary">Añadir al carrito</a>
+                </div>
+              </div>
+        </div>
+        
+
+    </div>
+
+</div>
+
+
